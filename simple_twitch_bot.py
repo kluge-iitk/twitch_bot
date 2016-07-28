@@ -25,7 +25,7 @@ import configparser
 # --------------------------------------------- Start Settings ----------------------------------------------------
 parser = configparser.ConfigParser()
 parser.read('config.ini')
-artemis = parser['artemis']
+artemis = parser[parser.sections()[0]]
 HOST = artemis["HOST"]  # Hostname of the IRC-Server in this case twitch's
 PORT = int(artemis["PORT"])  # Default IRC-Port
 CHAN = artemis["chan"]  # Channelname = #{Nickname} all lower case
